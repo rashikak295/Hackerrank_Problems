@@ -12,8 +12,7 @@ class Solution(object):
         nums_dict = collections.defaultdict(int)
         for n in nums:
             nums_dict[n] += 1    
-        nums_dict = nums_dict.items()
-        nums_dict = [(V, K) for K, V in nums_dict]
+        nums_dict = [(V, K) for K, V in nums_dict.items()]
         
         out = nums_dict[0:k] 
         heapq.heapify(out)
